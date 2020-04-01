@@ -1,0 +1,44 @@
+owner: HR
+tableName: employees
+preInsertScript: none
+whereClause: employee_id = 100
+primaryKeyField:
+  - employee_id
+wiki: "Master Table"
+dependencies:
+  - tableName: referencetable
+    preInsertScript: xx
+    whereClause: 1=12
+    dependencies:
+      - tableName: refe2
+        preInsertScript: x
+        whereClause: 1=12
+    relatedTables:
+      - tableName: refe table
+        preInsertScript: xxx
+        whereClause: 1=12
+        dependencies:
+          - tableName: deta
+            preInsertScript: 2refe
+            whereClause: 1=12
+relatedTables:
+  - tableName: detailTable1
+    preInsertScript: 1
+    whereClause: 1=12
+    dependencies:
+      - tableName: deta
+        preInsertScript: 1refe
+        whereClause: 1=12
+      - tableName: deta111
+        preInsertScript: 1refe33
+        whereClause: 1=122
+    relatedTables:
+      - tableName: detailTable1xxx3
+        preInsertScript: 1
+        whereClause: 13=1211
+  - tableName: detailTable2
+    preInsertScript: 2
+    whereClause: 1=12
+  - tableName: detailTable3
+    preInsertScript: 3
+    whereClause: 1=12

@@ -1,0 +1,5 @@
+-- delete target records EMPLOYEES
+delete from EMPLOYEES where employee_id=101;
+-- insert EMPLOYEES
+insert into EMPLOYEES(EMPLOYEE_ID, FIRST_NAME, LAST_NAME, EMAIL, PHONE_NUMBER, HIRE_DATE, JOB_ID, SALARY, COMMISSION_PCT, MANAGER_ID, DEPARTMENT_ID) values (101,'Neena','Kochhar','NKOCHHAR','515.123.4568',to_date('21/09/2005 00:00:00', 'DD/MM/YYYY HH24:MI:SS'),'AD_VP',17000,null,100,90);
+commit;
