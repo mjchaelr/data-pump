@@ -1,0 +1,31 @@
+app:
+  version: 0.0.1-SNAPSHOT
+#server:
+#  port: 0
+## Logging settings
+logging:
+  file: data-pump.log
+  pattern:
+    ## default date format: yyyy-MM-dd HH:mm:ss.SSS
+    dateformat: dd-MM-yyyy HH:mm:ss.SSS
+  level:
+    ## Options OFF/INFO/WARN/DEBUG
+    root: OFF #FIXME WARN - Thymeleaf error... cannot find template
+#    org:
+#      springframework:
+#        security: WARN
+spring:
+  main:
+    ## show banner CONSOLE/LOG/OFF
+    banner-mode: CONSOLE
+    ## This property will explicitly inform Spring that this isn't a web application.
+    web-application-type: NONE
+  ## Database settings
+  datasource:
+#    url: jdbc:oracle:thin:@localhost:1521:xe
+#    username: hr
+#    password: hr
+    driver-class-name: oracle.jdbc.OracleDriver
+  jpa:
+    show-sql: true
+    database-platform: org.hibernate.dialect.Oracle12cDialect
